@@ -1,0 +1,23 @@
+{
+	"COLLECTION_NAME": "GippityNFT",
+	"SYMBOL": "GIPP",
+	"DESCRIPTION": "Gippity's onchain collection!",
+	"IMAGE_URL": "https://yourimg.com/image.png",
+	"BANNER_URL": "https://yourimg.com/banner.png",
+	"WEBSITE_URL": "https://yourwebsite.com",
+	"ROYALTIES_BASIS_POINTS": 600,
+	"ROYALTIES_ADDRESS": "0xYourWalletAddress",
+	"NUM_LAYERS": 4,
+	"LAYER_NAMES": ["Background", "Body", "Face", "Accessory"],
+	"TIERS": [
+	  [100, 100, 100, 100],
+	  [50, 100, 150],              
+	  [120, 180],                  
+	  [200, 100]                   
+	],
+	"BACKGROUND_COLOR": "transparent",
+	"MAX_SUPPLY": 500,
+	"MAX_PER_ADDRESS": 5,
+	"MINT_PRICE": 0.0069
+  }
+  
