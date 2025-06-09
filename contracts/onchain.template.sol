@@ -12,7 +12,7 @@ import "./SSTORE2.sol";
 import "./DynamicBuffer.sol";
 import "./HelperLib.sol";
 
-contract GippityOnchainNFT is ERC721A, DefaultOperatorFilterer, ReentrancyGuard, Ownable {
+contract onchain is ERC721A, DefaultOperatorFilterer, ReentrancyGuard, Ownable {
     using HelperLib for uint;
     using DynamicBuffer for bytes;
 
