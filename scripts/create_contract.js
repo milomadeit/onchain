@@ -77,9 +77,9 @@ function replacePlaceholders(template, config) {
 }
 
 function main() {
-  const template = fs.readFileSync("./contracts/onchain.template.sol", "utf8");
+  const template = fs.readFileSync("../onchain2.template.sol", "utf8");
   const output = replacePlaceholders(template, config);
-  fs.writeFileSync("./contracts/on-chain.sol", output);
+  fs.writeFileSync("../contracts/on-chain.sol", output);
   console.log("✅ Contract generated at ./contracts/on-chain.sol");
 }
 

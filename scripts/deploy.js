@@ -5,7 +5,7 @@ async function main() {
   console.log("Deploying contract with account:", deployer.address);
 
   // Change 'Indelible' to your actual main contract name!
-  const NFT = await hre.ethers.getContractFactory("Indelible");
+  const NFT = await hre.ethers.getContractFactory("AbsChadsTst");
   const contract = await NFT.deploy(/* constructor args if any */);
 
   await contract.waitForDeployment();
