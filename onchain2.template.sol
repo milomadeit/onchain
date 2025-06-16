@@ -131,7 +131,9 @@ contract onchain is ERC721A, DefaultOperatorFilterer, ReentrancyGuard, Ownable {
             } else {
                 svgCode = hashToSVG(tokenHash);
             }
-            jsonBytes.appendSafe(abi.encodePacked('"image_data":"', svgCode, '",'));
+            jsonBytes.appendSafe(
+                abi.encodePacked('"image":"', svgCode, '",')
+            );
         }
 
         jsonBytes.appendSafe(abi.encodePacked('"attributes":', hashToMetadata(tokenHash), "}"));
@@ -245,7 +247,7 @@ contract onchain is ERC721A, DefaultOperatorFilterer, ReentrancyGuard, Ownable {
                 require(_numberMinted(msg.sender) + count <= maxPerAddress, "Exceeded max mints allowed");
                 require(count * publicMintPrice == msg.value, "Incorrect amount of ether sent");
             }
-            require(msg.sender == tx.origin, "EOAs only");
+            require(msg.sender == recipient, "Only direct mints allowed");
         }
         uint256 batchCount = count / MAX_BATCH_MINT;
         uint256 remainder = count % MAX_BATCH_MINT;

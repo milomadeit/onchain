@@ -331,9 +331,7 @@ contract AbsChadsTst is
             } else {
                 svgCode = hashToSVG(tokenHash);
             }
-            jsonBytes.appendSafe(
-                abi.encodePacked('"image_data":"', svgCode, '",')
-            );
+            jsonBytes.appendSafe(abi.encodePacked('"image":"', svgCode, '",'));
         }
 
         jsonBytes.appendSafe(
@@ -511,7 +509,7 @@ contract AbsChadsTst is
                     "Incorrect amount of ether sent"
                 );
             }
-            require(msg.sender == tx.origin, "EOAs only");
+            require(msg.sender == recipient, "Only direct mints allowed");
         }
         uint256 batchCount = count / MAX_BATCH_MINT;
         uint256 remainder = count % MAX_BATCH_MINT;

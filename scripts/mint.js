@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 // Set contract address!
-const CONTRACT_ADDRESS = "0x4a3f1e8d64f490CC075182afeD246B0Ea81aE0F7"; // <-- use your real address!
+const CONTRACT_ADDRESS = "0xBB1Bbb2ac00a115D98948E413B9Adc15194eB803"; // <-- use your real address!
 
 async function main() {
   const [deployer] = await hre.ethers.getSigners();

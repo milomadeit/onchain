@@ -4,7 +4,7 @@ const path = require("path");
 const config = require("../collection_config.json");
 
 // CHANGE THIS to your target contract
-const CONTRACT_ADDRESS = "0x4a3f1e8d64f490CC075182afeD246B0Ea81aE0F7"; // new abstract ca
+const CONTRACT_ADDRESS = "0xBB1Bbb2ac00a115D98948E413B9Adc15194eB803"; // new abstract ca
 // const CONTRACT_ADDRESS = "0xCdb43943699f41F1c61D4e67bf4B0163C4F90CAb"; // Hyperevm
 
 async function main() {
